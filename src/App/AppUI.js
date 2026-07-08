@@ -41,10 +41,6 @@ function AppUI({
             <BackgroundSelector selected={background} onSelect={setBackground} />
 
             <KanbanBoard>
-                <KanbanColumn title="Crear" className="KanbanColumn--create">
-                    <CreateTodoButton />
-                </KanbanColumn>
-
                 <KanbanColumn title="Pendientes" className="KanbanColumn--pending">
                     <TodoList>
                         {loading ? (
@@ -88,6 +84,8 @@ function AppUI({
                     </TodoList>
                 </KanbanColumn>
             </KanbanBoard>
+
+            <CreateTodoButton />
 
             <Modal>
                 <CreateTodoForm />

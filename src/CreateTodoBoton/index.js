@@ -9,9 +9,10 @@ function CreateTodoButton() {
         <button
             className="CreateTodoButton"
             type="button"
+            aria-label="Crear tarea"
             onClick={() => setOpenModal(true)}
         >
-            + Crear
+            +
         </button>
     );
 }

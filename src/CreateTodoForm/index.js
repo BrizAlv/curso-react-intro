@@ -32,7 +32,7 @@ function CreateTodoForm() {
                 >
                     Cancelar
                 </button>
-                <button className="CreateTodoButton" type="submit">
+                <button className="CreateTodoForm-submit" type="submit">
                     + Crear
                 </button>
             </div>

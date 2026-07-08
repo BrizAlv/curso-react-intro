@@ -34,12 +34,6 @@
     gap: 10px;
 }
 
-/* Columna crear */
-.KanbanColumn--create .KanbanColumn-title {
-    color: #306692;
-    border-bottom-color: #306692;
-}
-
 /* Columna pendientes */
 .KanbanColumn--pending .KanbanColumn-title {
     color: #93445e;
