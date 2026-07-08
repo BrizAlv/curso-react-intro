@@ -3,6 +3,8 @@ import { TodoSearch } from '../TodoSearch';
 import { TodoList } from '../TodoList';
 import { TodoItem } from '../TodoItem';
 import { CreateTodoButton } from '../CreateTodoBoton';
+import { CreateTodoForm } from '../CreateTodoForm';
+import { Modal } from '../Modal';
 import { KanbanBoard, KanbanColumn } from '../KanbanBoard';
 import { BackgroundSelector, bg1 } from '../BackgroundSelector';
 import { TodoItemSkeleton } from '../Loading';
@@ -14,7 +16,6 @@ function AppUI({
     completedTodos = [],
     searchValue = '',
     setSearchValue,
-    addTodo,
     deleteTodo,
     toggleComplete,
     background = bg1,
@@ -41,7 +42,7 @@ function AppUI({
 
             <KanbanBoard>
                 <KanbanColumn title="Crear" className="KanbanColumn--create">
-                    <CreateTodoButton onAdd={addTodo} />
+                    <CreateTodoButton />
                 </KanbanColumn>
 
                 <KanbanColumn title="Pendientes" className="KanbanColumn--pending">
@@ -87,6 +88,10 @@ function AppUI({
                     </TodoList>
                 </KanbanColumn>
             </KanbanBoard>
+
+            <Modal>
+                <CreateTodoForm />
+            </Modal>
         </>
     )
 }

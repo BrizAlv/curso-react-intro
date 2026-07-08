@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useLocalStorage } from './useLocalStorage';
 import { AppUI } from './AppUI';
 import { bg1 } from '../BackgroundSelector';
+import { TodoProvider } from '../TodoContext';
 
 function App() {
   const [searchValue, setSearchValue] = useState('');
@@ -34,19 +35,20 @@ function App() {
   };
 
   return (
-    <AppUI
-      loading={loading}
-      error={error}
-      pendingTodos={pendingTodos}
-      completedTodos={completedTodos}
-      searchValue={searchValue}
-      setSearchValue={setSearchValue}
-      addTodo={addTodo}
-      deleteTodo={deleteTodo}
-      toggleComplete={toggleComplete}
-      background={background}
-      setBackground={setBackground}
-    />
+    <TodoProvider addTodo={addTodo}>
+      <AppUI
+        loading={loading}
+        error={error}
+        pendingTodos={pendingTodos}
+        completedTodos={completedTodos}
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+        deleteTodo={deleteTodo}
+        toggleComplete={toggleComplete}
+        background={background}
+        setBackground={setBackground}
+      />
+    </TodoProvider>
   );
 }
 

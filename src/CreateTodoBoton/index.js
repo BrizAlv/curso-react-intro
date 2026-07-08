@@ -1,30 +1,18 @@
 import './CreateTodoBotton.css';
-import { useState } from 'react';
+import { useContext } from 'react';
+import { TodoContext } from '../TodoContext';
 
-function CreateTodoButton({ onAdd }) {
-    const [text, setText] = useState('');
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (text.trim()) {
-            onAdd(text.trim());
-            setText('');
-        }
-    };
+function CreateTodoButton() {
+    const { setOpenModal } = useContext(TodoContext);
 
     return (
-        <form className="CreateTodoForm" onSubmit={handleSubmit}>
-            <input
-                className="CreateTodoForm-input"
-                type="text"
-                placeholder="Nueva tarea..."
-                value={text}
-                onChange={(e) => setText(e.target.value)}
-            />
-            <button className="CreateTodoButton" type="submit">
-                + Crear
-            </button>
-        </form>
+        <button
+            className="CreateTodoButton"
+            type="button"
+            onClick={() => setOpenModal(true)}
+        >
+            + Crear
+        </button>
     );
 }
 export { CreateTodoButton };
