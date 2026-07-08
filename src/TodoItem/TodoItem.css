@@ -1,0 +1,68 @@
+.TodoItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    list-style: none;
+}
+
+.TodoItem-p {
+    flex: 1;
+    margin: 0;
+    font-size: 18px;
+}
+
+.TodoItem-p--complete {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.Icon {
+    cursor: pointer;
+    font-size: 20px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Check sin marcar: pendiente - resaltado */
+.Icon-check {
+    color: #8800ff;
+    background-color: rgba(151, 89, 154, 0.3);
+    border: 2px solid #8800ff;
+    font-size: 20px;
+    width: 32px;
+    height: 32px;
+}
+
+.Icon-check:hover {
+    background-color: rgba(151, 89, 154, 0.3);
+    transform: scale(1.15);
+}
+
+/* Check marcado: verde, sin círculo */
+.Icon-check--active {
+    color: #4CAF50;
+    background-color: transparent;
+    border: 2px solid transparent;
+}
+
+.Icon-check--active:hover {
+    background-color: transparent;
+}
+
+/* Botón eliminar: rojo - resaltado */
+.Icon-delete {
+    color: #EF5350;
+    font-size: 28px;
+    width: 14px;
+    height: 14px;
+}
+
+.Icon-delete:hover {
+    transform: scale(1.15);
+}

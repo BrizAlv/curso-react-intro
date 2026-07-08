@@ -1,0 +1,46 @@
+.BackgroundSelector {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 12px;
+    padding: 10px 20px;
+}
+
+.BackgroundSelector-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+}
+
+.BackgroundSelector-options {
+    display: flex;
+    gap: 8px;
+}
+
+.BackgroundSelector-thumb {
+    width: 56px;
+    height: 36px;
+    border-radius: 8px;
+    border: 3px solid transparent;
+    padding: 0;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.BackgroundSelector-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.BackgroundSelector-thumb:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.BackgroundSelector-thumb--active {
+    border-color: #2196F3;
+    box-shadow: 0 0 8px rgba(33, 150, 243, 0.5);
+}

@@ -1,0 +1,53 @@
+.KanbanBoard {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    min-height: 400px;
+    align-items: flex-start;
+}
+
+.KanbanColumn {
+    flex: 1;
+    background-color: rgba(252, 232, 236, 0.25);
+    border-radius: 12px;
+    padding: 16px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.KanbanColumn-title {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 16px 0;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #ddd;
+    text-align: center;
+}
+
+.KanbanColumn-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Columna crear */
+.KanbanColumn--create .KanbanColumn-title {
+    color: #306692;
+    border-bottom-color: #306692;
+}
+
+/* Columna pendientes */
+.KanbanColumn--pending .KanbanColumn-title {
+    color: #93445e;
+    border-bottom-color: #93445e;
+}
+
+/* Columna completadas */
+.KanbanColumn--completed .KanbanColumn-title {
+    color: #256605;
+    border-bottom-color: #2d491f;
+}

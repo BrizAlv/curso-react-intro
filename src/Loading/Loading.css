@@ -1,0 +1,62 @@
+.LoadingSpinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 48px;
+}
+
+.LoadingSpinner-icon {
+    width: 48px;
+    height: 48px;
+    border: 5px solid rgba(136, 0, 255, 0.2);
+    border-top-color: #8800ff;
+    border-radius: 50%;
+    animation: LoadingSpinner-spin 0.8s linear infinite;
+}
+
+@keyframes LoadingSpinner-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.TodoItem-skeleton {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    list-style: none;
+}
+
+.Skeleton-circle,
+.Skeleton-text {
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0.08) 25%,
+            rgba(255, 255, 255, 0.18) 37%,
+            rgba(255, 255, 255, 0.08) 63%);
+    background-size: 400% 100%;
+    animation: Skeleton-shimmer 1.4s ease infinite;
+    border-radius: 4px;
+}
+
+.Skeleton-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.Skeleton-text {
+    flex: 1;
+    height: 18px;
+}
+
+@keyframes Skeleton-shimmer {
+    0% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
