@@ -60,3 +60,9 @@
 .CreateTodoForm-submit:active {
     background-color: #1565C0;
 }
+
+@media (max-width: 400px) {
+    .CreateTodoForm-actions {
+        flex-direction: column;
+    }
+}

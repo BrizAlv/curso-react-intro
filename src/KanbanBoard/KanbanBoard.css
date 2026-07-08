@@ -8,6 +8,7 @@
 
 .KanbanColumn {
     flex: 1;
+    min-width: 0;
     background-color: rgba(252, 232, 236, 0.25);
     border-radius: 12px;
     padding: 16px;
@@ -32,6 +33,24 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+@media (max-width: 640px) {
+    .KanbanBoard {
+        padding: 12px;
+        gap: 8px;
+    }
+
+    .KanbanColumn {
+        min-height: auto;
+        padding: 10px;
+    }
+
+    .KanbanColumn-title {
+        font-size: 13px;
+        margin-bottom: 10px;
+        padding-bottom: 8px;
+    }
 }
 
 /* Columna pendientes */

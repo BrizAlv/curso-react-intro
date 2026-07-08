@@ -44,3 +44,15 @@
     background-color: #1976D2;
     border-color: #1976D2;
 }
+
+@media (max-width: 640px) {
+    .TodoSearch-container {
+        padding: 0 12px 12px;
+    }
+
+    .TodoSearch,
+    .TodoSearch-button {
+        font-size: 16px;
+        padding: 12px 16px;
+    }
+}

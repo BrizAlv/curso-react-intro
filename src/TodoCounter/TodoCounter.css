@@ -8,3 +8,10 @@ h1 {
 .TodoCounter-bold {
     font-weight: bold;
 }
+
+@media (max-width: 640px) {
+    h1 {
+        font-size: 22px;
+        padding: 24px 16px;
+    }
+}

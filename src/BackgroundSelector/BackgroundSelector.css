@@ -2,8 +2,16 @@
     display: flex;
     align-items: center;
     justify-content: right;
+    flex-wrap: wrap;
     gap: 12px;
     padding: 10px 20px;
+}
+
+@media (max-width: 640px) {
+    .BackgroundSelector {
+        justify-content: center;
+        padding: 10px 16px;
+    }
 }
 
 .BackgroundSelector-label {

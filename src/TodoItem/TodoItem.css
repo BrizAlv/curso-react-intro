@@ -66,3 +66,30 @@
 .Icon-delete:hover {
     transform: scale(1.15);
 }
+
+@media (max-width: 640px) {
+    .TodoItem {
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .TodoItem-p {
+        font-size: 13px;
+        overflow-wrap: break-word;
+        min-width: 0;
+    }
+
+    .Icon,
+    .Icon-check {
+        font-size: 16px;
+        width: 26px;
+        height: 26px;
+        flex-shrink: 0;
+    }
+
+    .Icon-delete {
+        font-size: 22px;
+        width: 12px;
+        height: 12px;
+    }
+}
